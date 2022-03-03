@@ -26,6 +26,7 @@ class OverviewCardsSmallScreen extends StatelessWidget {
           SizedBox(
             height: _width / 64,
           ),
+          //xmxjk,x
           InfoCardSmall(
             title: "الاعلانات المعلقة ",
             value: "32",
