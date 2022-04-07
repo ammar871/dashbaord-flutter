@@ -37,6 +37,8 @@ class MenuController extends GetxController {
         return _customIcon(Icons.person, itemName);
       case authenticationPageDisplayName:
         return _customIcon(Icons.exit_to_app, itemName);
+      case subCategoryPageDisplayName:
+        return _customIcon(Icons.category, itemName);
       default:
         return _customIcon(Icons.exit_to_app, itemName);
     }

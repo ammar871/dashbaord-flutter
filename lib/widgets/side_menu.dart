@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/controllers.dart';
 import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:flutter_web_dashboard/helpers/functions.dart';
 import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
+import 'package:flutter_web_dashboard/pages/authentication/authentication.dart';
 import 'package:flutter_web_dashboard/routing/routes.dart';
 import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 import 'package:flutter_web_dashboard/widgets/side_menu_item.dart';
@@ -56,16 +58,22 @@ class SideMenu extends StatelessWidget {
                       .map((item) => SideMenuItem(
                           itemName: item.name,
                           onTap: () {
-                            if(item.route == authenticationPageRoute){
-                              Get.offAllNamed(authenticationPageRoute);
-                              menuController.changeActiveItemTo(overviewPageDisplayName);
 
-                            }
+                            // if(item.route == authenticationPageRoute){
+                            //   logOut().then((value){
+                            //     // Get.to(AuthenticationPage());
+                            //     Navigator.pushReplacementNamed(context, authenticationPageRoute);
+                            //     // menuController.changeActiveItemTo(overviewPageDisplayName);
+                            //   });
+                            //
+                            // }
                             if (!menuController.isActive(item.name)) {
                               menuController.changeActiveItemTo(item.name);
                               if(ResponsiveWidget.isSmallScreen(context))
                               Get.back();
-                              navigationController.navigateTo(item.route);
+                             navigationController.navigateTo(item.route);
+                              // Navigator.pushNamed(context, item.route);
+
                             }
                           }))
                       .toList(),

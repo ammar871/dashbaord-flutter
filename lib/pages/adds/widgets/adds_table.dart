@@ -1,11 +1,11 @@
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 import 'package:flutter_web_dashboard/constants/style.dart';
 import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 
 /// Example without datasource
-class DriversTable extends StatelessWidget {
+class AddsTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

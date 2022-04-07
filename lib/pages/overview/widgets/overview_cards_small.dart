@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import '../../../Models/general.dart';
 import 'info_card_small.dart';
 
 class OverviewCardsSmallScreen extends StatelessWidget {
+  final General  general;
+
+  OverviewCardsSmallScreen(this.general);
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -12,15 +16,15 @@ class OverviewCardsSmallScreen extends StatelessWidget {
         children: [
           InfoCardSmall(
             title: "عدد الاعلانات",
-            value: "17",
+            value: general.counterAdds,
             onTap: () {},
           ),
           SizedBox(
             height: _width / 64,
           ),
           InfoCardSmall(
-            title: "الاعلانات المرفوضة",
-            value: "3",
+            title: "عدد الاقسام",
+            value: general.counterCategories,
             onTap: () {},
           ),
           SizedBox(
@@ -28,8 +32,8 @@ class OverviewCardsSmallScreen extends StatelessWidget {
           ),
           //xmxjk,x
           InfoCardSmall(
-            title: "الاعلانات المعلقة ",
-            value: "32",
+            title: "عدد الاقسام الفرعية",
+            value: general.counterSub,
             onTap: () {},
           ),
           SizedBox(

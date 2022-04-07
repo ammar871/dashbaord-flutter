@@ -22,6 +22,18 @@ const clientsPageRoute = "/clients";
 const authenticationPageDisplayName = "تسجيل الخروج";
 const authenticationPageRoute = "/auth";
 
+const subCategoryPageDisplayName = "الاقسام الفرعية";
+const subCategoryPageRoute = "/subCategoryPage";
+
+const updateCategoryPageDisplayName = "updateCategory";
+const updateCategoryPageRoute = "/updateCategory";
+
+const addCategoryPageDisplayName = "addCategory";
+const addCategoryPageRoute = "/addCategory";
+
+const addAdminPageDisplayName = "addAdmin";
+const addAdminPageRoute = "/addAdmin";
+
 class MenuItem {
   final String name;
   final String route;
@@ -36,6 +48,9 @@ List<MenuItem> sideMenuItemRoutes = [
  MenuItem(driversPageDisplayName, driversPageRoute),
  MenuItem(clientsPageDisplayName, clientsPageRoute),
   MenuItem(categoriesPageDisplayName, categoriesPageRoute),
+  MenuItem(subCategoryPageDisplayName, subCategoryPageRoute),
   MenuItem(usersPageDisplayName, usersPageRoute),
- MenuItem(authenticationPageDisplayName, authenticationPageRoute),
+
+ // MenuItem(authenticationPageDisplayName, authenticationPageRoute),
+
 ];

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dashboard/Models/general.dart';
 import 'package:flutter_web_dashboard/pages/overview/widgets/info_card.dart';
 
 
 class OverviewCardsMediumScreen extends StatelessWidget {
+final General  general;
+
+OverviewCardsMediumScreen(this.general);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +18,8 @@ class OverviewCardsMediumScreen extends StatelessWidget {
         Row(
                   children: [
                     InfoCard(
-                      title: "عدد الاعلانات",
-                      value: "7",
+                      title: "عدد الاقسام",
+                      value: general.counterCategories,
                       onTap: () {},
                   topColor: Colors.orange,
 
@@ -24,8 +28,8 @@ class OverviewCardsMediumScreen extends StatelessWidget {
                       width: _width / 64,
                     ),
                     InfoCard(
-                      title: "الاعلانات المعلقة",
-                      value: "17",
+                      title: "عدد الاقسام الفرعية",
+                      value: general.counterSub,
                   topColor: Colors.lightGreen,
 
                       onTap: () {},
@@ -40,8 +44,8 @@ class OverviewCardsMediumScreen extends StatelessWidget {
                   children: [
              
                     InfoCard(
-                      title: "الاعلانات المرفوضة",
-                      value: "3",
+                      title: "عدد الاعلانات",
+                      value: general.counterAdds,
                   topColor: Colors.redAccent,
 
                       onTap: () {},
