@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
               name: authenticationPageRoute, page: () => AuthenticationPage()),
         ],
         debugShowCheckedModeBanner: false,
-        title: 'Dashboard',
+        title: 'Donya Dashboard ',
         theme: ThemeData(
           scaffoldBackgroundColor: light,
           textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme ??

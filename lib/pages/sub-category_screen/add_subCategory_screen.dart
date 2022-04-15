@@ -134,7 +134,7 @@ class _AddSubCategoryState extends State<AddSubCategory> {
                         CustomTextField2(
                           controller: _controllerArabic,
                           hint: "الاسم (عربي)",
-                          inputType: TextInputType.number,
+                          inputType: TextInputType.text,
                         ),
                         SizedBox(
                           height: 20,
@@ -142,7 +142,7 @@ class _AddSubCategoryState extends State<AddSubCategory> {
                         CustomTextField2(
                           controller: _controllerEnglish,
                           hint: "الاسم (English)",
-                          inputType: TextInputType.number,
+                          inputType: TextInputType.text,
                         ),
                         SizedBox(
                           height: 20,
@@ -150,7 +150,7 @@ class _AddSubCategoryState extends State<AddSubCategory> {
                         CustomTextField2(
                           controller: _controllerFrance,
                           hint: "الاسم (France)",
-                          inputType: TextInputType.number,
+                          inputType: TextInputType.text,
                         ),
                         SizedBox(
                           height: 20,

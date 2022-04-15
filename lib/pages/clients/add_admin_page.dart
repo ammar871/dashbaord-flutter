@@ -145,7 +145,7 @@ class _AddAdminPageState extends State<AddAdminPage> {
                         CustomTextField2(
                           controller: _controllerFullName,
                           hint: "الاسم كاملا",
-                          inputType: TextInputType.number,
+                          inputType: TextInputType.text,
                         ),
                         SizedBox(
                           height: 20,
@@ -154,7 +154,7 @@ class _AddAdminPageState extends State<AddAdminPage> {
                             ? SizedBox():   CustomTextField2(
                           controller: _controllerEmail,
                           hint: "البريد الالكترونى",
-                          inputType: TextInputType.number,
+                          inputType: TextInputType.emailAddress,
                         ),
                         SizedBox(
                           height: 20,
@@ -164,7 +164,7 @@ class _AddAdminPageState extends State<AddAdminPage> {
                             : CustomTextField2(
                                 controller: _controllerPassword,
                                 hint: "الرقم السرى",
-                                inputType: TextInputType.number,
+                                inputType: TextInputType.text,
                               ),
                         SizedBox(
                           height: 20,

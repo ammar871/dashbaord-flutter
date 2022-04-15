@@ -167,7 +167,7 @@ bool loadCategories=false;
       final jsonData = jsonsDataString;
       print(jsonData);
       loadAdd=false;
-
+getCategories();
       emit(AddCategoriesSuccessStat("success"));
       // getCategories();
     } else {

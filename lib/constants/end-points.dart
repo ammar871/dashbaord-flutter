@@ -1,6 +1,6 @@
-const baseUrl = "https://f162-156-207-82-33.ngrok.io/api";
-const baseUrl2 = "https://f162-156-207-82-33.ngrok.io";
-const baseUrlImages ="https://07d9-156-207-82-33.ngrok.io/images/";
+const baseUrl = "https://6f6c-156-207-74-96.ngrok.io/api";
+const baseUrl2 = "https://6f6c-156-207-74-96.ngrok.io";
+const baseUrlImages ="https://6f6c-156-207-74-96.ngrok.io/images/";
 
 const getCounters = "/get-counters";
 
