@@ -178,7 +178,7 @@ getCategories();
   }
 
 // sub Category
-  List<SubCategory> _listSubCategories = [];
+  List<SubCategoryResponse> _listSubCategories = [];
 
   getSubCategories() async {
     _listSubCategories = [];
@@ -194,7 +194,7 @@ getCategories();
       print(response);
       final data = jsonDecode(responseBody);
       data.forEach((e) {
-        _listSubCategories.add(SubCategory.fromJson(e));
+        _listSubCategories.add(SubCategoryResponse.fromJson(e));
       });
       emit(GetSubCategoriesSuccessStat(_listSubCategories));
     } else {

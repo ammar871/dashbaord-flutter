@@ -79,7 +79,7 @@ class UpdateCategoriesLoadErrorImageStat extends CategoryState {}
 
 // sub Category
 class GetSubCategoriesSuccessStat extends CategoryState {
-  final List<SubCategory> list ;
+  final List<SubCategoryResponse> list ;
   GetSubCategoriesSuccessStat(this.list);
 }
 

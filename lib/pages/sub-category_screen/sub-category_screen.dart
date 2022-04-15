@@ -115,7 +115,7 @@ class SubCategoryScreen extends StatelessWidget {
 class TableWidgetSubCategory extends StatelessWidget {
   final String label, name, id, image;
   final bool onUpdate, onDelete;
-  final List<SubCategory> list;
+  final List<SubCategoryResponse> list;
 
   TableWidgetSubCategory({this.label,
     this.name,
@@ -183,8 +183,8 @@ class TableWidgetSubCategory extends StatelessWidget {
                     list.length,
                         (index) =>
                         DataRow(cells: [
-                          DataCell(CustomText(text: "${list[index].id}")),
-                          DataCell(CustomText(text: list[index].nameArbice)),
+                          DataCell(CustomText(text: "${list[index].subCategory.id}")),
+                          DataCell(CustomText(text: list[index].subCategory.nameArbice)),
                           DataCell(Container(
                             child: Container(
                               width: 80,
@@ -193,7 +193,7 @@ class TableWidgetSubCategory extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(3),
                                 child: CachedNetworkImage(
                                   imageUrl:
-                                  "$baseUrlImages${list[index].image}",
+                                  "$baseUrlImages${list[index].subCategory.image}",
                                   height: 60,
                                   width: 100,
                                   placeholder: (context, url) =>
@@ -216,7 +216,7 @@ class TableWidgetSubCategory extends StatelessWidget {
                               onPressed: () {
                                 pushPage(
                                     context: context,
-                                    page: UpdateSubCategory(list[index]));
+                                    page: UpdateSubCategory(list[index].subCategory));
                               },
                               child: Center(
                                 child: CustomText(
@@ -246,7 +246,7 @@ class TableWidgetSubCategory extends StatelessWidget {
                                         title: Texts(
                                             fSize: 18,
                                             color: Colors.red,
-                                            title: list[index].nameArbice,
+                                            title: list[index].subCategory.nameArbice,
                                             weight: FontWeight.bold),
                                         content: Texts(
                                             fSize: 20,
@@ -280,7 +280,7 @@ class TableWidgetSubCategory extends StatelessWidget {
                                     return;
                                   } else if (value == 1) {
                                     CategoryCubit.get(context).deleteSubCategory(
-                                        context: context, id: list[index].id);
+                                        context: context, id: list[index].subCategory.id);
                                   }
                                 });
                               },

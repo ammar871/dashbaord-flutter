@@ -1,3 +1,26 @@
+class SubCategoryResponse {
+  SubCategory subCategory;
+  int conter;
+
+  SubCategoryResponse({this.subCategory, this.conter});
+
+  SubCategoryResponse.fromJson(Map<String, dynamic> json) {
+    subCategory = json['subCategory'] != null
+        ? new SubCategory.fromJson(json['subCategory'])
+        : null;
+    conter = json['conter'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.subCategory != null) {
+      data['subCategory'] = this.subCategory.toJson();
+    }
+    data['conter'] = this.conter;
+    return data;
+  }
+}
+
 class SubCategory {
   int id;
   int categoryId;
