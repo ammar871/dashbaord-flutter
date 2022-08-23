@@ -77244,7 +77244,7 @@ return A.H($async$rm,r)},
 lW(a){var s=0,r=A.I(t.z),q=this,p,o,n,m,l
 var $async$lW=A.D(function(b,c){if(b===1)return A.F(c,r)
 while(true)switch(s){case 0:q.b6(new A.RA())
-p=A.fk("POST",A.cM("https://donyagroup.urapp.site/api/image/upload",0,null))
+p=A.fk("POST",A.cM("https://donyagroup.urapp.site/api/image/dawnload",0,null))
 o=A.aHX(a.d)
 n=A.aDt("application","octet-stream",null)
 p.y.push(new A.NK("file",a.e,a.b,n,o))
