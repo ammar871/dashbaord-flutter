@@ -1,28 +1,26 @@
-users
-id name userName deviceToken image createdAt 
+ Photo? photo;
+  City? city;
+  Country? country;
 
-carTypes
-id name image price sets createdAt 
+  Items({this.photo, this.city, this.country});
 
-drivers
-id userId lat lng  carId zoneId passport drivingLicense carImage carModleId carMakeYear status(int) createdAt
+  Items.fromJson(Map<String, dynamic> json) {
+    photo = json['photo'] != null ? new Photo.fromJson(json['photo']) : null;
+    city = json['city'] != null ? new City.fromJson(json['city']) : null;
+    country =
+        json['country'] != null ? new Country.fromJson(json['country']) : null;
+  }
 
-Areas 
-id name status createdAt
-
-zones
-id name polygon status createdAt
-
-Trips
-id startPoint endPoint startAddress endAdress userId driverId price carId OTP status payment createdAt
-
-C1:3F:29:2E:FB:17:39:5C:28:82:49:14:19:BC:76:4F:16:EC:7F:B3
-com.limousine_driver.limousine_driver
-https://i.diawi.com/SC2oNX
-
-الشروط والاحكام الخاصة بالورش :-
-١/ان يتحمل صاحب الورشة اي اضرار اتجاه السيارات التي قام صاحب الورشة بتصليحها .
-٢/تطبيق car SA غير مسؤول عن تصليح السيارات يتحمل المسؤولية صاحب الورشة .
-سياسة ضمان الورش :-
-١/تختلف من ورشه الى ورشه حسب سياسة الضمان الخاصة في الورشه نفسها .
-٢/تطبيق car SA لايعطي ضمان نيابة عن الورشه.
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.photo != null) {
+      data['photo'] = this.photo!.toJson();
+    }
+    if (this.city != null) {
+      data['city'] = this.city!.toJson();
+    }
+    if (this.country != null) {
+      data['country'] = this.country!.toJson();
+    }
+    return data;
+  }
