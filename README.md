@@ -1,26 +1,32 @@
- Photo? photo;
-  City? city;
-  Country? country;
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "server=localhost; port=3306; database=WajedDB; user=WajedDB; password=102010020010002000Abc0161820a; Persist Security Info=False; Connect Timeout=300"
+  },
 
-  Items({this.photo, this.city, this.country});
 
-  Items.fromJson(Map<String, dynamic> json) {
-    photo = json['photo'] != null ? new Photo.fromJson(json['photo']) : null;
-    city = json['city'] != null ? new City.fromJson(json['city']) : null;
-    country =
-        json['country'] != null ? new Country.fromJson(json['country']) : null;
+
+  "AppSettings": {
+    "Token": "Super secret key"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+
+  "urls": "http://localhost::50010",
+  "AllowedHosts": "*",
+  "Access-Control-Allow-Headers": "*",
+
+  "JWT": {
+    "ValidAudience": "http://localhost:6000",
+    "ValidIssuer": "http://localhost:6001",
+    "Secret": "ByYM000OLlMQG6VVVp1OH7Xzyr7gHuw1qvUC5dcGt3SNM"
   }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.photo != null) {
-      data['photo'] = this.photo!.toJson();
-    }
-    if (this.city != null) {
-      data['city'] = this.city!.toJson();
-    }
-    if (this.country != null) {
-      data['country'] = this.country!.toJson();
-    }
-    return data;
+  ,
+  "FcmNotification": {
+    "SenderId": "843761443970",
+    "ServerKey": "AAAAxHQZ5II:APA91bGMQPKNZ_7Gqug9SZncCC-2osGqCEiBNGnSCpFeOx7HRhooJsgsZHIZuM9EavdLI4vqKAOhLLoY3Cp9rG_M3PrBb1R8qKI35eSRXHmknEZkGXDitb8z2iyMBbuZ1Vfa6MFIcNDk"
   }
+}
