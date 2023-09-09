@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.exit_travil.exit_travil",
+      "sha256_cert_fingerprints":
+      ["36:F0:49:81:F2:CE:50:B4:90:27:FD:BD:45:9C:AB:4A:DF:5D:43:CC:BC:BE:00:EA:1B:3E:EB:51:77:F7:64:9A"]
+    }
+  }]
+  
